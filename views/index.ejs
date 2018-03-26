@@ -8,7 +8,13 @@
 <main>
 	<ul>
 		<% pollList.forEach(function(poll) { %>
-			<li><%= poll.name %> - <%= poll.entries %></li>
+			<li>
+				<h3><%= poll.doc.question %></h3>
+
+				<% poll.doc.choices.forEach(function(choice) { %>
+					<p><%= choice %></p>
+				<% }); %>
+			</li>
 		<% }); %>
 	</ul>
 </main>

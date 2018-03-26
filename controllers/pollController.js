@@ -1,9 +1,28 @@
+var db = require('../db');
+
 exports.homePage = function (req, res) {
 	console.log('HomePage');
-	res.render('index', {
-		timeRefresh: true,
-		pollList: req.session.pollList || []
+	db.list({include_docs: true}, function(err, body) {
+		if (err) {
+			res.send('Sry error');
+		}
+		// res.send(body.rows);
+		res.render('index', {
+			// timeRefresh: true,
+			// pollList: req.session.pollList || []
+			pollList: body.rows || []
+		});
 	});
+	
+	// db.get('foo', function(err, body) {
+
+	// 	console.log(err);
+		
+	// 	// db.destroy(body._id, body._rev, function() {
+	// 		// res.send('destroyed')
+	// 	// })
+	// 	res.send(body._id);
+	// })
 }
 
 exports.newPollForm = function(req, res) {
@@ -12,11 +31,19 @@ exports.newPollForm = function(req, res) {
 }
 
 exports.addNewPoll = function(req, res) {
-	console.log('Add new poll', req.body);
-	if (!req.session.pollList) {
-		req.session.pollList = [];
+	var newPoll = {
+		question: req.body['poll-question'],
+		choices: req.body['poll-choices']
 	}
-	req.session.pollList.push({name: req.body['poll-question'], entries: 44})
+
+	db.insert(newPoll, function (err, body, header) {
+		if(err) { return res.send(err.message, err['status-code']); }
+		
+      // res.send("Insert ok!", 200);
+		res.redirect('/');
+	});
+
+
+	// req.session.pollList.push({name: req.body['poll-question'], entries: 44})
 	
-	res.redirect('/');
 }
