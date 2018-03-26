@@ -1,10 +1,10 @@
 var db = require('../db');
+var helpers = require('../helpers');
 
 exports.homePage = function (req, res) {
 	db.list({include_docs: true}, function(err, body) {
-		if (err) {
-			res.send('Sry error');
-		}
+		helpers.handleError(err);
+
 		res.render('index', {
 			// timeRefresh: true,
 			// pollList: req.session.pollList || []
@@ -18,18 +18,32 @@ exports.newPollForm = function(req, res) {
 }
 
 exports.addNewPoll = function(req, res) {
+	var choices = req.body['poll-choices'].map(function(choice, index) {
+		return {
+			id: 'choice-' + index,
+			answer: choice,
+			votedOn: 0,
+		}
+	});
+
 	var newPoll = {
 		question: req.body['poll-question'],
-		choices: req.body['poll-choices']
+		choices: choices
 	}
 
 	db.insert(newPoll, function (err, body, header) {
-		if(err) { return res.send(err.message, err['status-code']); }
+		helpers.handleError(err);
 		
 		res.redirect('/');
 	});
 }
 
 exports.pollDetail = function(req, res) {
-	res.send('poll details');
+	var id = req.params.id;
+
+	db.get(id, function(err, body) {
+		helpers.handleError(err);
+		res.send(body);
+		// res.render('pollDetails');
+	});
 }

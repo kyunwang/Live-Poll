@@ -10,8 +10,8 @@ var pollController = require('../controllers/pollController');
 
 // define the home page route
 router.get('/', pollController.homePage);
-router.get('/:id', pollController.pollDetail);
 router.get('/new-poll', pollController.newPollForm);
 router.post('/new-poll', pollController.addNewPoll);
+router.get('/poll/:id', pollController.pollDetail);
 
 module.exports = router;
