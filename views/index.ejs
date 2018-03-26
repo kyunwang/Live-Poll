@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+
+<header>
+	<h1>Choose poll</h1>
+	<a href="/new-poll">🔢</a>
+</header>
+
+<main>
+	<ul>
+		<% pollList.forEach(function(poll) { %>
+			<li><%= poll.name %> - <%= poll.entries %></li>
+		<% }); %>
+	</ul>
+</main>
+
+<% include ./partials/footer.ejs %>

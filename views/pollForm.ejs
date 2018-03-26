@@ -1,0 +1,24 @@
+<% include ./partials/header.ejs %>
+
+<header>
+	<h1>Create poll</h1>
+</header>
+
+<main>
+	form
+	<form action="/new-poll" method="POST">
+		<label for="poll-question">Poll question</label>
+		<input id="poll-question" name="poll-question" type="text" required></input>
+		
+		<label for="poll-choice-1">Poll question</label>
+		<input id="poll-choice-1" name="poll-choice-1" type="text" required />
+		<label for="poll-choice-2">Poll question</label>
+		<input id="poll-choice-2" name="poll-choice-2" type="text" />
+		<label for="poll-choice-3">Poll question</label>
+		<input id="poll-choice-3" name="poll-choice-3" type="text" />
+
+		<input type="submit">
+	</form>
+</main>
+
+<% include ./partials/footer.ejs %>
