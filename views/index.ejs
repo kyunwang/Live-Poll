@@ -10,12 +10,13 @@
 		<ul>
 			<% pollList.forEach(function(poll) { %>
 				<li>
-					<a href="/<%= poll.id %>">
+					<a href="/poll/<%= poll.id %>">
 	
 						<h3><%= poll.doc.question %></h3>
 	
 						<% poll.doc.choices.forEach(function(choice) { %>
-							<p><%= choice %></p>
+							<pre><%= h.dump(choice) %></pre>
+							<p><%= choice.answer %></p>
 						<% }); %>
 						
 					</a>
