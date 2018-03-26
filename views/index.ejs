@@ -6,11 +6,25 @@
 </header>
 
 <main>
-	<ul>
-		<% pollList.forEach(function(poll) { %>
-			<li><%= poll.name %> - <%= poll.entries %></li>
-		<% }); %>
-	</ul>
+	<% if (pollList) { %>
+		<ul>
+			<% pollList.forEach(function(poll) { %>
+				<li>
+					<a href="/<%= poll.id %>">
+	
+						<h3><%= poll.doc.question %></h3>
+	
+						<% poll.doc.choices.forEach(function(choice) { %>
+							<p><%= choice %></p>
+						<% }); %>
+						
+					</a>
+				</li>
+			<% }); %>
+		</ul>
+	<% } else { %>
+		<p>Oops there are no active polls as of now</p>
+	<% } %>
 </main>
 
 <% include ./partials/footer.ejs %>
