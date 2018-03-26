@@ -41,11 +41,10 @@ app.use(bodyParser.json())
 // 		}
 // 	}))
 // 	.use(compression())
-// 	// pass variables to our templates + all requests
-// 	// Locals are all the vars available in the template
-// 	// From wesbos
 	.use(function (req, res, next) {
 		res.locals.title = 'poop';
+		res.locals.timeRefresh = false;
+		res.locals.pollList = [{ name: 'First poll ever', entries: 2 }];
 		next();
 	})
 	.use('/', mainRoute)

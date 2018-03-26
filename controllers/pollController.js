@@ -1,6 +1,8 @@
 exports.homePage = function (req, res) {
 	console.log('HomePage');
-	res.render('index');
+	res.render('index', {
+		timeRefresh: true
+	});
 }
 
 exports.newPollForm = function(req, res) {
@@ -9,6 +11,6 @@ exports.newPollForm = function(req, res) {
 }
 
 exports.addNewPoll = function(req, res) {
-	console.log('Add new poll');
-	redirect('/');
+	console.log('Add new poll', req.body);
+	res.redirect('/');
 }
