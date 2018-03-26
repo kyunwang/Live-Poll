@@ -12,6 +12,7 @@ var pollController = require('../controllers/pollController');
 router.get('/', pollController.homePage);
 router.get('/new-poll', pollController.newPollForm);
 router.post('/new-poll', pollController.addNewPoll);
-router.get('/poll/:id', pollController.pollDetail);
+router.get('/poll/:id', pollController.getPoll);
+router.post('/poll/:id', pollController.votePoll);
 
 module.exports = router;

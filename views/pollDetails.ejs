@@ -1,4 +1,24 @@
 <% include ./partials/header.ejs %>
 
+<header>
+	<h1><%= poll.question %></h1>
+</header>
+
+<form action="/poll/<%= poll._id %>" method="POST">
+	<ul>
+		<% poll.choices.forEach(function(choice) { %>
+			<li>
+				<label for="<%= choice.id %>"><%= choice.answer %></label>
+				<p><%= choice.votedOn %></p>
+				<input id="<%= choice.id %>" type="radio" name="poll-choice" value="<%= choice.id %>" required/>
+			</li>
+		<% }) %>
+	</ul>
+
+	<input type="submit" />
+</form>
+
+<pre><%= h.dump(poll) %></pre>
+
 
 <% include ./partials/footer.ejs %>
