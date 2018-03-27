@@ -5,7 +5,7 @@ exports.homePage = function (req, res) {
 	db.list({include_docs: true}, function(err, body) {
 		h.handleError(err);
 
-		res.render('index', {
+		res.render('pollOverview', {
 			// timeRefresh: true,
 			// pollList: req.session.pollList || []
 			pollList: body.rows || []
