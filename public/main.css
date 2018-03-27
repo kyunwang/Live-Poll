@@ -1,4 +1,158 @@
+
+html {
+	font-size: 1em;
+	font-family: sans-serif;
+	/* background-color: red; */
+	color: #3f3f3f;
+}
+
+body {
+	min-width: 5em;
+	max-width: 40em;
+	margin: 3em 1em;
+}
+
 main {
 	background-color: #fff;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+a,
+a:visited {
+	color: #3f3f3f;
+	text-decoration: none;
+}
+
+a:focus,
+a:hover {
+	color: #81D4FA;
+}
+
+@media all and (min-width: 42em) {
+	body {
+		margin: 3em auto;
+	}
+}
+
+
+header h1 {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 3em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	margin: 0;
+}
+
+/*==========================
+=== Overview page - Homepage
+===========================*/
+
+.poll-card {
+
+}
+
+.poll--card h3 {
+	
+}
+
+.poll--card p {
+	
+}
+
+.poll--card a {
+	display: block;
+	padding: 1em 2em;
+}
+
+
+/*==========================
+=== Detail page - where you can vote
+===========================*/
+
+form {
+	/* max-width: 30em; */
+	/* width: 100%; */
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+form ul {
+	
+}
+
+[type="submit"] {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	border: none;
+	width: 100%;
+	padding: 1em;
+	transition: all .15s ease-in;
+}
+
+[type="submit"]:focus,
+[type="submit"]:hover {
+	background-color: #81D4FA;
+	color: #fff;
+}
+
+.poll--choice {
+}
+
+.poll--choice input:checked + label {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.poll--choice label:hover,
+.poll--choice label:focus {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.poll--choice label b {
+	font-size: 1.5em;
+}
+
+.poll--choice label p {
+	display: inline-block;
+	font-size: 1.5em;
+	line-height: 1.4;
+	/* margin-left: auto; */
+}
+
+@supports (display: flex) {
+	.poll--choice label {
+		display: flex;
+		padding: 1.5em;
+		transition: box-shadow .2s ease-in;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+@supports not (display: flex) {
+	.poll--choice label {
+		display: block;
+		padding: 1.5em;
+		transition: box-shadow .2s ease-in;
+	}
+}
+
+
+
+.poll--choice [type="radio"] {
+	visibility: hidden;
+	position: absolute;
+	pointer-events: none;
+}
+
