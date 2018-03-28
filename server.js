@@ -6,6 +6,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 // var compression = require('compression');
 
+var webSocket = require('./webSocket');
 
 var app = express();
 
