@@ -6,17 +6,17 @@
 	<h1><%= poll.question %></h1>
 </header>
 
-<p id="test">0</p>
-
 <form action="/poll/<%= poll._id %>" method="POST">
 	<ul>
 		<% poll.choices.forEach(function(choice) { %>
 			<li class="poll--choice">
 				<input id="<%= choice.id %>" type="radio" name="poll-choice" value="<%= choice.id %>" required/>
 
-				<label for="<%= choice.id %>">
+				<label id="test-<%= choice.id %>" for="<%= choice.id %>">
 					<p><b><%= choice.answer %></b></p>
-					<p>votes: <%= choice.votedOn %></p>
+					<p>votes:
+						<span id="votes-<%= choice.id %>"><%= choice.votedOn %></span>
+					</p>
 				</label>
 			</li>
 		<% }) %>

@@ -13,7 +13,8 @@
 	// Check on existence/support of/for Websockets
 	if ('WebSocket' in window) {
 		// Connect websocket
-		var ws = new WebSocket('ws://localhost:40510/poll');
+		// var ws = new WebSocket('ws://localhost:40510/poll');
+		var ws = new WebSocket('ws://7ec42093.ngrok.io/poll');
 
 		// Call on the on('connection')
 		ws.onopen = function () {
@@ -24,9 +25,16 @@
 
 		// Happens on all 'ws.send()' calls from the server
 		ws.onmessage = function (e) {
-			console.log('message', e);
-			poll.numb++;
-			poll.update();
+			// console.log('message', e);
+			// poll.numb++;
+			console.log(1, e);
+			
+			try {
+				var data = JSON.parse(e.data);
+				poll.update(data);
+			} catch (err) {
+				console.log('Not a vote');
+			}
 		}
 
 		// Calls when sockets are closed (dies not execute on chrome does on firefox)
@@ -76,18 +84,14 @@
 				
 			},
 			numb: 0, 
-			update: function() {
-				var test = document.getElementById('test');
-
-				console.log(poll.numb);
+			update: function(data) {
+				var voteAmount = document.getElementById('votes-' + data.choice);
 				
-				
-				test.innerHTML = this.numb;
+				voteAmount.textContent = Number(voteAmount.textContent) + 1;
 			}
 		}
 
 		poll.init();
-		// pollchoices.addEvents();
 
 	}
 })()

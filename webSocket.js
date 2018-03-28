@@ -15,14 +15,12 @@ wss.on('connection', function (ws) {
 		
 		// Broadcast to everyone else.
 		wss.clients.forEach(function each(client) {
-			console.log(wss.clients);
-				try {
-					var data = JSON.parse(client);
-					client.send(data);
-				} catch (err) {
-					client.send(message);
-				}
-			// }
+			try {
+				var data = JSON.parse(client);
+				client.send(data);
+			} catch (err) {
+				client.send(message);
+			}
 		});
 
 
