@@ -127,7 +127,8 @@ form ul {
 	border: none;
 	width: 100%;
 	padding: 1em;
-	transition: all .15s ease-in;
+	transition: color .15s ease-in;
+	transition: background-color .15s ease-in;
 }
 
 [type="submit"]:focus,
