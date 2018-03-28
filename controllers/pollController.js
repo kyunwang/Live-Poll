@@ -45,6 +45,7 @@ exports.getPoll = function(req, res) {
 		h.handleError(err);
 		// res.send(body);
 		res.render('pollDetails', {
+			timeRefresh: true,
 			poll: body
 		});
 	});
