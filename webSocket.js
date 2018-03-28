@@ -16,8 +16,14 @@ wss.on('connection', function (ws) {
 		// Broadcast to everyone else.
 		wss.clients.forEach(function each(client) {
 			try {
-				var data = JSON.parse(client);
-				client.send(data);
+				// Parse to update the database
+				var data = JSON.parse(message);
+				
+				// Callback needed for here or just check for callback in update?
+				db.update(data.id, data.choice, function() {
+					// Send message back to reflect to update the voted clientside
+					client.send(message);
+				});
 			} catch (err) {
 				client.send(message);
 			}

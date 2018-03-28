@@ -25,10 +25,6 @@
 
 		// Happens on all 'ws.send()' calls from the server
 		ws.onmessage = function (e) {
-			// console.log('message', e);
-			// poll.numb++;
-			console.log(1, e);
-			
 			try {
 				var data = JSON.parse(e.data);
 				poll.update(data);
