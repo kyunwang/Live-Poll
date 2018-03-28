@@ -1,4 +1,4 @@
-#
+# Simple polling app
 sketches
 Tests: put in another md file
 
@@ -35,8 +35,10 @@ rework the client js
 rework the websockets and look more into it
 
 host this somewhere
+Host the database instead of using localhost (connect to cloud database)
 
 add install instructions ect
+
 
 
 
