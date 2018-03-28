@@ -1,4 +1,9 @@
 #
+sketches
+Tests: put in another md file
+
+ie11 supports the websockets: (image is the not yet completed version)
+
 
 
 Quick dump of sources:
@@ -13,3 +18,34 @@ refresh meta tag
 
 web sockets
 - https://html.spec.whatwg.org/multipage/web-sockets.html
+
+
+Started using es5 only to get support to ie10
+
+##Todo
+add some more codecomments
+
+add a timelimit
+add a timer with the timelimit
+
+implemment sass
+implemment 'private' users
+
+rework the client js
+rework the websockets and look more into it
+
+host this somewhere
+
+add install instructions ect
+
+
+
+use nunjucks instead of ejs?
+put the poll in a iframe in case one does not support websockets? (will use the meta refresh instead)
+
+maybe use a lib like virtual-dom or moon.js to make the updating easier
+look into postcss?
+
+
+## Issues
+- Styling on IE11 (euhm fix worthy?)
