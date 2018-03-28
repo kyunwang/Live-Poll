@@ -12,10 +12,13 @@ wss.on('connection', function (ws) {
   	ws.on('pong', heartbeat);
 
 	ws.on('message', function (message) {
-		console.log('received: %s', message)
-		ws.send(message);
+		try {
+			var data = JSON.parse(message);
+			ws.send(data);
+		} catch(err) {
+			ws.send(message);
+		}
 	});
-
 });
 
 wss.on('close', function (ws) {

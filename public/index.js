@@ -7,16 +7,19 @@
 		}
 	}
 
+	// Super quick way to get the id
+	var pollId = window.location.pathname.replace('/poll/', '');
 
+	// Check on existence/support of/for Websockets
 	if ('WebSocket' in window) {
 		// Connect websocket
 		var ws = new WebSocket('ws://localhost:40510/poll');
 
 		// Call on the on('connection')
 		ws.onopen = function () {
-			console.log('websocket is connected ...')
+			console.log('websocket is connected ...');
 			// Send to the on 'message' in the server
-			ws.send('connected')
+			ws.send('connected');
 		}
 
 		// Happens on all 'ws.send()' calls from the server
@@ -54,8 +57,17 @@
 					catch (j) {
 						setTimeout(function () {
 							addClickEvent(self.choices[j], function() {
-								ws.send(self.choices[j].value, 'coockies');
-							})
+								// console.log(pollId);
+								var data = {
+									id: pollId,
+									choice: self.choices[j].value
+								}
+
+								var stringified = JSON.stringify(data);
+
+								// ws.send(data);
+								ws.send(stringified);
+							});
 						}, 0);
 					}
 				};
