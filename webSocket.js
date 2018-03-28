@@ -1,6 +1,8 @@
 // Sources: https://github.com/websockets/ws
 // https://hackernoon.com/nodejs-web-socket-example-tutorial-send-message-connect-express-set-up-easy-step-30347a2c5535
 
+var db = require('./db');
+
 var WebSocketServer = require('ws').Server;
 var wss = new WebSocketServer({ port: 40510, path: '/poll' });
 
@@ -11,19 +13,19 @@ wss.on('connection', function (ws) {
 
 	ws.on('message', function (message) {
 		console.log('received: %s', message)
+		ws.send(message);
 	});
 
-	ws.send('sup');
 });
 
 wss.on('close', function (ws) {
-	console.log('CLISSE');
+	console.log('CLOSING CONNECTION');
 	// ws.terminate();
 });
 
 
 function noop() {
-	console.log('alive');
+	// console.log('alive');
 }
 
 function heartbeat() {

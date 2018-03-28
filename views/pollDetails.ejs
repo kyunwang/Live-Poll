@@ -24,23 +24,6 @@
 	<input type="submit" />
 </form>
 
-<script>
-	var ws = new WebSocket('ws://localhost:40510/poll');
-	// Call on the on('connection')
-   ws.onopen = function () {
-		console.log('websocket is connected ...')
-		// Send to the on 'message' in the server
-      ws.send('connected')
-   }
-
-	// Happens on all 'ws.send()' calls from the server
-   ws.onmessage = function (e) {
-		console.log('message', e);
-	}
-	
-	ws.onclose = function(e) {
-		ws.send('Close WS connection');
-	}
-</script>
+<script src="/index.js"></script>
 
 <% include ./partials/footer.ejs %>
