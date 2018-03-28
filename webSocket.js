@@ -9,21 +9,29 @@ var wss = new WebSocketServer({ port: 40510, path: '/poll' });
 wss.on('connection', function (ws) {
 	ws.isAlive = true;
 
-  	ws.on('pong', heartbeat);
+	ws.on('pong', heartbeat);
 
 	ws.on('message', function (message) {
-		try {
-			var data = JSON.parse(message);
-			ws.send(data);
-		} catch(err) {
-			ws.send(message);
-		}
+		
+		// Broadcast to everyone else.
+		wss.clients.forEach(function each(client) {
+			console.log(wss.clients);
+				try {
+					var data = JSON.parse(client);
+					client.send(data);
+				} catch (err) {
+					client.send(message);
+				}
+			// }
+		});
+
+
 	});
 });
 
 wss.on('close', function (ws) {
 	console.log('CLOSING CONNECTION');
-	// ws.terminate();
+	ws.terminate();
 });
 
 
@@ -32,14 +40,14 @@ function noop() {
 }
 
 function heartbeat() {
-  this.isAlive = true;
+	this.isAlive = true;
 }
 
 const interval = setInterval(function ping() {
-  wss.clients.forEach(function each(ws) {
-    if (ws.isAlive === false) return ws.terminate();
+	wss.clients.forEach(function each(ws) {
+		if (ws.isAlive === false) return ws.terminate();
 
-    ws.isAlive = false;
-    ws.ping(noop);
-  });
+		ws.isAlive = false;
+		ws.ping(noop);
+	});
 }, 3000);

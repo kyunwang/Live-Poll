@@ -25,6 +25,8 @@
 		// Happens on all 'ws.send()' calls from the server
 		ws.onmessage = function (e) {
 			console.log('message', e);
+			poll.numb++;
+			poll.update();
 		}
 
 		// Calls when sockets are closed (dies not execute on chrome does on firefox)
@@ -33,7 +35,7 @@
 		}
 
 
-		var pollchoices = {
+		var poll = {
 			choices: document.getElementsByTagName('input'),
 			init: function () {
 				var filteredChoices = [];
@@ -72,10 +74,19 @@
 					}
 				};
 				
+			},
+			numb: 0, 
+			update: function() {
+				var test = document.getElementById('test');
+
+				console.log(poll.numb);
+				
+				
+				test.innerHTML = this.numb;
 			}
 		}
 
-		pollchoices.init();
+		poll.init();
 		// pollchoices.addEvents();
 
 	}
