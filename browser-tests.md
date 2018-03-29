@@ -54,17 +54,17 @@ Do note that the submit butten has yet to be removed in the images. The submit b
 ### iPhone4
 #### Safari
 Some of the styling doesn't seem to be supported. And a few default styling has not been overwritten.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/iphone4-safari.png" alt="" style="width: 300px; height: 300px"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" style="width: 300px; height: 300px"/>
 
 ### Samsung Galaxy s8
 
 #### Samsung Internet
 All works fine here, but the submit button color differs.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-si.jpg" alt="" style="width: 300px; height: 300px"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg" alt="" style="width: 300px; height: 300px"/>
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" style="width: 300px; height: 300px"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" style="width: 300px; height: 300px"/>
 
 
 
@@ -74,23 +74,23 @@ All works fine here, but the submit button color differs here too.
 IE8 does not support websockets and will fallback using the submitbutton.
 Some styling also doesn't work.
 
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/ie8.png" alt="" style="width: 300px; height: 300px"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png" alt="" style="width: 300px; height: 300px"/>
 
 #### IE11
 Websockets fullt works on IE11. Some styling does not work correctly either like the focus/hover state
 
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/ie11.png" alt="" style="width: 300px; height: 300px"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" style="width: 300px; height: 300px"/>
 
 
-[iph4-safari]: https://github.com/kyunwang/live-poll/blob/master/doc/images/iphone4-safari.png
+[iph4-safari]: https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/iphone4-safari.png
 
-[sg-sb]: https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-si.jpg
-[sg-chrome]: https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-chrome.jpeg
+[sg-sb]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg
+[sg-chrome]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg
 
-[ie8]: https://github.com/kyunwang/live-poll/blob/master/doc/images/ie8.png
-[ie11]: https://github.com/kyunwang/live-poll/blob/master/doc/images/ie11.png
+[ie8]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png
+[ie11]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png
 
-[.]: https://github.com/kyunwang/live-poll/blob/master/doc/images/
-[.]: https://github.com/kyunwang/live-poll/blob/master/doc/images/
-[.]: https://github.com/kyunwang/live-poll/blob/master/doc/images/
+[.]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/
+[.]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/
+[.]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/
 
