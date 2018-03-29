@@ -79,13 +79,13 @@ Do note that the submit butten has yet to be removed in the images. The submit b
 ### Macbook
 
 #### Chrome
-<img src="https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/mb-chrome.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-chrome.png" alt="" width="300" height="300"/>
 
 #### Firefox
-<img src="https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/mb-ff.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-ff.png" alt="" width="300" height="300"/>
 
 #### Safari
-<img src="https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/mb-safari.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-safari.png" alt="" width="300" height="300"/>
 
 ### iPhone4
 #### Safari
@@ -100,7 +100,7 @@ All works fine here, but the submit button color differs.
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpg" alt="" width="300" height="300"/>
 
 
 ### VirtualBox
