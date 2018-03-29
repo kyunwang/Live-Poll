@@ -5,7 +5,7 @@ exports.homePage = function (req, res) {
 	db.list({include_docs: true}, function(err, body) {
 		h.handleError(err);
 
-		res.render('index', {
+		res.render('pollOverview', {
 			// timeRefresh: true,
 			// pollList: req.session.pollList || []
 			pollList: body.rows || []
@@ -45,6 +45,7 @@ exports.getPoll = function(req, res) {
 		h.handleError(err);
 		// res.send(body);
 		res.render('pollDetails', {
+			timeRefresh: true,
 			poll: body
 		});
 	});
@@ -54,28 +55,10 @@ exports.votePoll = function(req, res) {
 	var id = req.params.id;
 
 	var selectedChoice = req.body['poll-choice'];
-
-	db.get(id, function(err, body) {
-		h.handleError(err);
-
-		var choices = body.choices.map(function(choice, index) {
-			return {
-				id: 'choice-' + index,
-				answer: choice.answer,
-				votedOn: selectedChoice === choice.id ? choice.votedOn + 1 : choice.votedOn,
-			}
-		});
-
-		var updatedPoll = {
-			question: body.question,
-			choices: choices,
-			'_rev': body._rev
-		}
-
-		db.insert(updatedPoll, body._id, function(err2, body2) {
-			h.handleError(err);
-
-			res.redirect('/poll/' + id);
-		})
-	})
+	
+	db.update(id, selectedChoice, function() {
+		res.redirect('/poll/' + id);
+	});
 }
+
+

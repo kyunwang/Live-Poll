@@ -6,6 +6,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 // var compression = require('compression');
 
+var webSocket = require('./webSocket');
 
 var app = express();
 
@@ -22,7 +23,7 @@ var helpers = require('./helpers');
 app.set('view engine', 'ejs');
 
 // Set static route
-app.use('/public', express.static(path.join(__dirname, '/public/'), { maxAge: '31d' }));
+app.use('/', express.static(path.join(__dirname, '/public/'), { maxAge: '31d' }));
 // app.use('/public', express.static(path.join(__dirname, '/dist/'), { maxAge: '31d' }));
 
 app.use(bodyParser.json())

@@ -1,23 +1,18 @@
 <% include ./partials/header.ejs %>
 
 <header>
-	<h1>Choose poll</h1>
-	<a href="/new-poll">🔢</a>
+	<h1>Choose a poll</h1>
+	<a href="/new-poll">+ New poll</a>
 </header>
 
 <main>
 	<% if (pollList) { %>
 		<ul>
 			<% pollList.forEach(function(poll) { %>
-				<li>
+				<li class="poll--card">
 					<a href="/poll/<%= poll.id %>">
 	
 						<h3><%= poll.doc.question %></h3>
-	
-						<% poll.doc.choices.forEach(function(choice) { %>
-							<pre><%= h.dump(choice) %></pre>
-							<p><%= choice.answer %></p>
-						<% }); %>
 						
 					</a>
 				</li>
@@ -27,5 +22,6 @@
 		<p>Oops there are no active polls as of now</p>
 	<% } %>
 </main>
+
 
 <% include ./partials/footer.ejs %>

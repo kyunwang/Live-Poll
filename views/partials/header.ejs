@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
 	<!-- If you need to support IE 9 or IE 8 -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
 	<% if (timeRefresh) { %>
-		<meta http-equiv="refresh" content="3">
+		<noscript><meta http-equiv="refresh" content="3"></noscript>
 	<% } %>
+
+	<link rel="stylesheet" href="/main.css"/>
 
 	<title><%= title %></title>
 </head>
