@@ -146,8 +146,8 @@ form ul {
 
 .poll--choice {
 	position: relative;
-	pointer-events: none;
-	overflow: hidden;
+	/* pointer-events: none;
+	overflow: hidden; */
 }
 
 .poll--choice [type="radio"] {
@@ -157,9 +157,9 @@ form ul {
 }
 
 input:checked + label {
-	background: red;
-	color: red;
+	background: #f3f3f3;
 }
+
 
 .poll--choice label:hover,
 .poll--choice label:focus {
