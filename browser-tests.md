@@ -48,17 +48,17 @@ Do note that the submit butten has yet to be removed in the images if there is w
 ### iPhone4
 #### Safari
 Some of the styling doesn't seem to be supported. And a few default styling has not been overwritten.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/iphone4-safari.png" alt="" style="max-width: 300px; max-height: 300px"/>
+<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/iphone4-safari.png" alt="" style="min-width: 100%; max-width: 300px; min-height: 100%; max-height: 300px"/>
 
 ### Samsung Galaxy s8
 
 #### Samsung Internet
 All works fine here, but the submit button color differs.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-si.jpg" alt="" style="max-width: 300px; max-height: 300px"/>
+<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-si.jpg" alt="" style="min-width: 100%; max-width: 300px; min-height: 100%; max-height: 300px"/>
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" style="max-width: 300px; max-height: 300px"/>
+<img src="https://github.com/kyunwang/live-poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" style="min-width: 100%; max-width: 300px; min-height: 100%; max-height: 300px"/>
 
 [iph4-safari]: https://github.com/kyunwang/live-poll/blob/master/doc/images/iphone4-safari.png
 
