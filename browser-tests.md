@@ -54,17 +54,17 @@ Do note that the submit butten has yet to be removed in the images. The submit b
 ### iPhone4
 #### Safari
 Some of the styling doesn't seem to be supported. And a few default styling has not been overwritten.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" style="width: 300; height: 300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" width"300" height="300"/>
 
 ### Samsung Galaxy s8
 
 #### Samsung Internet
 All works fine here, but the submit button color differs.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg" alt="" style="width: 300; height: 300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg" alt="" width"300" height="300"/>
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" style="width: 300; height: 300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg" alt="" width"300" height="300"/>
 
 
 
@@ -74,12 +74,12 @@ All works fine here, but the submit button color differs here too.
 IE8 does not support websockets and will fallback using the submitbutton.
 Some styling also doesn't work.
 
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png" alt="" style="width: 300; height: 300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png" alt="" width"300" height="300"/>
 
 #### IE11
 Websockets fullt works on IE11. Some styling does not work correctly either like the focus/hover state
 
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" style="width: 300; height: 300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" width"300" height="300"/>
 
 
 [iph4-safari]: https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/iphone4-safari.png
