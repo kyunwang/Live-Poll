@@ -152,11 +152,11 @@ form ul {
 
 .poll--choice [type="radio"] {
 	position: absolute;
-	left: -200px;
+	left: -9999px;
 	pointer-events: none;
 }
 
-input:checked + label {
+.poll--choice [type="radio"]:checked + label {
 	background: #f3f3f3;
 }
 
@@ -166,8 +166,9 @@ input:checked + label {
 	background: #f3f3f3;
 }
 
+
 @supports (box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)) {
-	.poll--choice input:checked + label,
+	.poll--choice [type="radio"]:checked + label,
 	.poll--choice label:hover,
 	.poll--choice label:focus {
 		background: #fff;

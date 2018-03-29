@@ -7,14 +7,51 @@
 		}
 	}
 
+// 	function unwrap(wrapper) {
+// 		// place childNodes in document fragment
+// 		var docFrag = document.createDocumentFragment();
+// 		while (wrapper.firstChild) {
+// 			 var child = wrapper.removeChild(wrapper.firstChild);
+// 			 docFrag.appendChild(child);
+// 		}
+
+// 		console.log(docFrag);
+		
+// 		// replace wrapper with document fragment
+// 		wrapper.parentNode.replaceChild(docFrag, wrapper);
+//   }
+
+// 	function extendContent() {
+// 		var metas = document.getElementsByTagName('meta');
+// 		// var nosc = document.getElementsByTagName('noscript');
+// 		// nosc[0].parentElement.removeChild(nosc[0]);
+// 		// delete nosc;
+		
+// 		for (var i = 0; i < metas.length; i++) {
+// 			if (metas[i].getAttribute('http-equiv') === 'refresh') {
+// 				console.log(true);
+// 				// Because removing the tag does not work. we extend it for now.
+// 				metas[i].content = "99";
+// 			}
+// 		}
+// 	}
+
 	// Super quick way to get the id
 	var pollId = window.location.pathname.replace('/poll/', '');
 
 	// Check on existence/support of/for Websockets
 	if ('WebSocket' in window) {
+		if(window.stop) {
+			window.stop();
+		} else {
+			document.execCommand('Stop');
+		}
+
 		// Connect websocket
 		// var ws = new WebSocket('ws://localhost:40510/poll');
-		var ws = new WebSocket('ws://7ec42093.ngrok.io/poll');
+		var ws = new WebSocket('ws://814c8628.ngrok.io/poll');
+
+
 
 		// Call on the on('connection')
 		ws.onopen = function () {
@@ -79,7 +116,6 @@
 				};
 				
 			},
-			numb: 0, 
 			update: function(data) {
 				var voteAmount = document.getElementById('votes-' + data.choice);
 				
