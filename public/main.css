@@ -145,15 +145,35 @@ form ul {
 }
 
 .poll--choice {
+	position: relative;
+	/* pointer-events: none;
+	overflow: hidden; */
 }
 
-.poll--choice input:checked + label {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.poll--choice [type="radio"] {
+	position: absolute;
+	left: -9999px;
+	pointer-events: none;
 }
+
+.poll--choice [type="radio"]:checked + label {
+	background: #f3f3f3;
+}
+
 
 .poll--choice label:hover,
 .poll--choice label:focus {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background: #f3f3f3;
+}
+
+
+@supports (box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)) {
+	.poll--choice [type="radio"]:checked + label,
+	.poll--choice label:hover,
+	.poll--choice label:focus {
+		background: #fff;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
 }
 
 .poll--choice label b {
@@ -186,12 +206,6 @@ form ul {
 }
 
 
-
-.poll--choice [type="radio"] {
-	visibility: hidden;
-	position: absolute;
-	pointer-events: none;
-}
 
 
 /*==========================

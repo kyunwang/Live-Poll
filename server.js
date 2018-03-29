@@ -31,7 +31,7 @@ app.use(bodyParser.json())
 
 // 	.use(compression())
 	.use(function (req, res, next) {
-		res.locals.title = 'poop';
+		res.locals.title = 'Live Poll';
 		res.locals.timeRefresh = false;
 		res.locals.h = helpers;
 		next();
