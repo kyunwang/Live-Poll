@@ -116,11 +116,11 @@ Websockets fullt works on IE11. Some styling does not work correctly either like
 
 <img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" width="300" height="300"/>
 
-[demo]: https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/poll-demo.gif
+[demo]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/poll-demo.gif
 
-[sketch]: https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/sketch.jpg
+[sketch]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sketch.jpg
 
-[iph4-safari]: https://github.com/kyunwang/Live-Poll/blob/readme/doc/images/iphone4-safari.png
+[iph4-safari]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png
 
 [sg-sb]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg
 [sg-chrome]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg
