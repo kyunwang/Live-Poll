@@ -79,28 +79,28 @@ Do note that the submit butten has yet to be removed in the images. The submit b
 ### Macbook
 
 #### Chrome
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-chrome.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-chrome.png" alt="" width="300"/>
 
 #### Firefox
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-ff.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-ff.png" alt="" width="300"/>
 
 #### Safari
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-safari.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-safari.png" alt="" width="300"/>
 
 ### iPhone4
 #### Safari
 Some of the styling doesn't seem to be supported. And a few default styling has not been overwritten.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" width="300"/>
 
 ### Samsung Galaxy s8
 
 #### Samsung Internet
 All works fine here, but the submit button color differs.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg" alt="" width="300"/>
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpg" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpg" alt="" width="300"/>
 
 
 ### VirtualBox
@@ -109,12 +109,12 @@ All works fine here, but the submit button color differs here too.
 IE8 does not support websockets and will fallback using the submitbutton.
 Some styling also doesn't work.
 
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie8.png" alt="" width="300"/>
 
 #### IE11
 Websockets fullt works on IE11. Some styling does not work correctly either like the focus/hover state
 
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" width="300" height="300"/>
+<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/ie11.png" alt="" width="300"/>
 
 [demo]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/poll-demo.gif
 

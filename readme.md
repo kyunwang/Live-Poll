@@ -9,6 +9,10 @@ The goal is to keep the application functional for 'all' browsers/devices with a
 
 ![demo][demo]
 
+**Time for this project:** 2 days (from a week) [Result](https://github.com/kyunwang/Live-Poll/commit/8c7041ebe2b9da5742073826c450a1e1abfb414b)
+
+All commits afterwards were made after the deadline.
+
 # Table of Content
 - [Getting started](#getting-started)
 - [](#)
