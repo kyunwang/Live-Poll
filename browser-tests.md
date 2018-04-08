@@ -87,10 +87,12 @@ Do note that the submit butten has yet to be removed in the images. The submit b
 #### Safari
 <img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/mb-safari.png" alt="" width="300"/>
 
+
 ### iPhone4
 #### Safari
 Some of the styling doesn't seem to be supported. And a few default styling has not been overwritten.
 <img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png" alt="" width="300"/>
+
 
 ### Samsung Galaxy s8
 
@@ -100,7 +102,7 @@ All works fine here, but the submit button color differs.
 
 #### Chrome
 All works fine here, but the submit button color differs here too.
-<img src="https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpg" alt="" width="300"/>
+
 
 
 ### VirtualBox
@@ -121,6 +123,7 @@ Websockets fullt works on IE11. Some styling does not work correctly either like
 [sketch]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sketch.jpg
 
 [iph4-safari]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/iphone4-safari.png
+
 
 [sg-sb]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-si.jpg
 [sg-chrome]: https://github.com/kyunwang/Live-Poll/blob/master/doc/images/sg8-chrome.jpeg
